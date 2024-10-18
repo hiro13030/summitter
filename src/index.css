@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  @apply bg-gray-50;
+}
+
+/* 修正: 複合クラスではなく個別プロパティで定義 */
+.transition-all {
+  @apply transition duration-300 ease-in-out;
+}
+
+.hover-scale {
+  @apply transition transform duration-300 ease-in-out hover:scale-105; /* 個別に定義 */
+}
+
+.btn {
+  @apply px-4 py-2 rounded-full font-semibold transition duration-300 ease-in-out;
+}
+
+.btn-primary {
+  @apply bg-blue-500 text-white hover:bg-blue-600;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+
+.input {
+  @apply w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
